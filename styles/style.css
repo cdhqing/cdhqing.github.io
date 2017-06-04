@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+}
+body {
+   
+     background: #fff url(../images/bg.jpg) repeat-x 0 top;
+}
+.warred{
+    margin:0 auto;
+    width:960px;
+    background-color:#fff;
+    padding:10px;
+}
+.piclist > li{
+    float:left;
+    width:192px;
+    text-align:center;
+}
+.clearfix:after{
+    content:'';
+	display:block;
+	clear:both;
+    }
