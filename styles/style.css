@@ -29,9 +29,15 @@ h2{
     right:0;
     bottom:0;
 }
-table {
-    border:1px #333 solid;
-}
+table
+  {
+  border-collapse:collapse;
+  }
+
+table,th, td
+  {
+  border: 1px solid #333;
+  }
 .clearfix:after{
     content:'';
 	display:block;
