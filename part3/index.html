@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13班第三节作业</title>
+</head>
+<body>
+    <form action="memberlist.php" method="post">
+        <input type="text" name="username" placeholder="用户名">
+        <input type="password" name="password">
+        性别：<lable>男<input type="radio" value=1 name="sex">女<input type="radio" value=0  name="sex"></lable>
+       
+        所在地<select name="address">
+            <option value=010>广东</option>
+             <option value=020>广西</option>
+              <option value=030>河南</option>
+        </select>
+        <input type="number" name="number">数字
+        <input type="email" name="email">邮箱
+        <input type="date" name="date">日期
+        <input type="tel" name="tel">电话
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+
+    </form>   
+    <p></p> 
+    <hr />
+    <form oninput="result.value = Math.pow(parseInt(a.value), parseInt(b.value))">
+  <input type="number" name="a" value="2"> ^
+  <input type="number" name="b" value="3"> =
+  <output name="result">5</output>
+</form>
+</body>
+</html>
