@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,105 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>13班第三节作业</title>
 </head>
+
 <body>
-   
-  <div class="main">
-      <h1>前端13班第三节作业</h1>
-      <div>
-          <h2>第一、表格的制作</h2>
-          <div class="content-table">
-              <table>
-                  
-              </table>
-          </div>
-      </div>
 
-      <div>第二、表单的制作</div>
-      <ul>
-          <li>
-            <div class="asktext">
-                1、你的姓名：
+    <div class="main">
+        <h1>前端13班第三节作业</h1>
+        <div class="warp">
+            <h2>第一、表格的制作</h2>
+            <div class="content-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>星期一</th>
+                            <th>星期二</th>
+                            <th>星期三</th>
+                            <th>星期四</th>
+                            <th>星期五</th>
+                            <th>星期六</th>
+                            <th>星期日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>上午</th>
+                            <td rowspan="2">上班</td>
+                           <td rowspan="2">上班</td>
+                            <td rowspan="2">上班</td>
+                            <td rowspan="2">上班</td>
+                            <td>上班</td>
+                            <td>学习</td>
+                            <td>运动</td>
+                        </tr>
+                        <tr>
+                            <th>下午</th>
+                           
+                            <td>上班</td>
+                            
+                            <td>学习</td>
+                            <td>学习</td>
+                        </tr>
+                        <tr>
+                            <th>晚上</th>
+                            <td colspan="7">学习</td>
+                          
+                          
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="userwrite">
-                <input type="text" name="username" placeholder="请输入您的名字">
-            </div>
-          </li>
-         <li>
-            <div class="asktext">
-                3、你的出生日期：
-            </div>
-            <div class="userwrite">
-                <input type="date" name="date" placeholder="请输入您的出生日期">
-            </div>
-          </li>
-          <li>
-            <div class="asktext">
-                4、是否有适配移动端的前端开发经验。
-            </div>
-            <div class="userwrite">
-                <input type="text" name="username" placeholder="请输入您的名字">
-            </div>
-          </li>
-          <li>
-            <div class="asktext">
-                1、你的姓名：
-            </div>
-            <div class="userwrite">
-                <input type="text" name="username" placeholder="请输入您的名字">
-            </div>
-          </li>
-      </ul>
-      <div></div>
-  </div>
+        </div>
 
-</form>
+        <div class="warp">
+            <h2>第二、表单的制作</h2>
+
+            <ul>
+                <li>
+                    <div class="asktext">
+                        1、你的姓名：
+                    </div>
+                    <div class="userwrite">
+                        <input type="text" name="username" placeholder="请输入您的名字">
+                    </div>
+                </li>
+                <li>
+                    <div class="asktext">
+                        3、你的出生日期：
+                    </div>
+                    <div class="userwrite">
+                        <input type="date" name="date" placeholder="请输入您的出生日期">
+                    </div>
+                </li>
+                <li>
+                    <div class="asktext">
+                        4、是否有适配移动端的前端开发经验。
+                    </div>
+                    <div class="userwrite">
+                        <input type="text" name="username" placeholder="请输入您的名字">
+                    </div>
+                </li>
+                <li>
+                    <div class="asktext">
+                        1、你的姓名：
+                    </div>
+                    <div class="userwrite">
+                        <input type="text" name="username" placeholder="请输入您的名字">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="warp">
+            <h2>第三、计算次方的计算器</h2>
+            <form oninput="result.value = Math.pow(parseInt(a.value), parseInt(b.value))">
+                <input type="number" name="a" value="2"> ^
+                <input type="number" name="b" value="3"> =
+                <output name="result">5</output>
+        </div>
+    </div>
+
+    </form>
 </body>
+
 </html>
