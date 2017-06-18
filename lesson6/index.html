@@ -11,13 +11,44 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#"><i class="icon iconfont icon-rili"></i>static</a></li>
-            <li><a href="#"><i class="icon iconfont icon-rili1"></i>relative</a></li>
+    <nav class="clearfix">
+        <ul class="navmenu">
+            <li>
+                <a href="#"><i class="icon iconfont icon-rili"></i>static</a>
+                <ul class="nav-sub">
+                    <li><a href="#">position</a></li>
+                    <li><a href="#">position</a></li>
+                    <li><a href="#">position</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="icon iconfont icon-rili1"></i>relative</a>
+                 <ul class="nav-sub">
+                    <li><a href="#">position</a></li>
+                    <li><a href="#">position</a></li>
+                    <li><a href="#">position</a></li>
+                </ul>
+            </li>
             <li><a href="#"><i class="icon iconfont icon-rili3"></i>absolute</a></li>
             <li><a href="#"><i class="icon iconfont icon-rili2"></i>fixed</a></li>
+            <li><a href="#"><i class="icon iconfont icon-rili4"></i>sticky</a></li>
         </ul>
     </nav>
+    <div class="main">
+        <h2>position:static 静态定位 普通文档流</h2>
+        <p>该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定义对 table-*-group, table-row, table-column, table-cell, table-caption 元素应用的效果。</p>
+        <hr>
+        <h2>position:relative 相对定位 普通文档流</h2>
+        <p>该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定义对 table-*-group, table-row, table-column, table-cell, table-caption 元素应用的效果。</p>
+        <hr>
+        <h2>position:absolute 绝对定位 脱离文档流</h2>
+        <p>不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+        <hr>
+        <h2>position:fixed 固定定位 脱离文档流</h2>
+        <p>不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+        <hr>
+        <h2>position:sticky 粘贴定位 脱离文档流</h2>
+        <p>不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+    </div>
 </body>
 </html>
