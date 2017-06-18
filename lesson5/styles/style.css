@@ -1,0 +1,143 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5{
+    margin:0;
+    padding:0;
+}
+body {
+    color:#555;
+    background-color:#F7FAFC;
+    font-size: 13px;
+}
+.warp {
+    width:300px;
+    margin:0 auto;
+}
+.hide-text {
+    text-indent:-9999px;
+}
+.header {
+   margin:30px 0 20px 0;
+    text-align: center;
+}
+
+.header .logo {
+    background:url("../images/logo.png") no-repeat center center;
+    
+    height:44px;
+    background-size: contain;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight:200;
+    padding-top:25px;
+}
+
+.index-nav {
+    height: 44px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    margin:0 auto;
+    margin-bottom:10px;
+}
+.index-nav a {
+    margin:0 10px;
+    padding:0 5px;
+    display: inline-block;
+    color: #868687;
+    
+}
+.index-nav .active {
+    color:#0f88eb;
+    border-bottom:2px solid #0f88eb;
+}
+.form-input {
+    border:1px solid #d5d5d5;  
+    overflow: hidden;
+}
+.form-login {
+    margin-top:22px;
+}
+.form-input > input {
+  height:47px;
+  width:100%;
+  line-height: 19px;
+  font-size:14px;
+  padding-left:10px;
+  border:0;
+  border-bottom:1px solid #d5d5d5;  
+  outline:0;
+  margin-bottom: 1px;
+  box-sizing: border-box;
+}
+.form-input > input:last-child {
+    border:0;
+    }
+input::-webkit-input-placeholder { color: #ccc; }
+.btn {
+    height:41px;
+    display:block;
+    padding: 0;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 3px;
+    line-height: 41px;
+    outline: 0;
+    border: 0;
+    margin:10px 0;
+   
+}
+.form-login .reg {
+    background-color:#0f88eb;
+    color:#fff;
+    text-shadow:0 1px 1px rgba(0,0,0,.2);
+}
+.form-login .downapp {
+     background: 0 0;
+     border: 1px solid #96c2e9;
+     color: #5fa6e5;
+     margin-top:50px;
+     font-size: 14px;
+}
+.logo-tip {
+    text-align: center;
+    margin:25px 0 ;
+    color: #999;
+}
+a:link {
+    text-decoration: none;
+}
+.footer {
+    margin-top:40px;
+}
+.footer p {
+    text-align: center;
+}
+.footer p a {
+    color: #aebdc9;
+}
+.pos {
+    position: fixed;
+    z-index: 10000;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    font-weight: 700;
+    line-height: normal;
+}
+.pos span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzYiIHZpZXdCb3g9I…YgMjUuN3YtNGMtMi43LTIuMi00LTUtNC04LjZDMiA3IDcgMiAxNCAyeiIvPjwvZz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
