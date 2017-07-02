@@ -2,6 +2,9 @@
     margin:0;
     padding:0;
 }
+ul {
+    list-style:none;
+}
 html, body {
     height: 100%;
 }
@@ -12,6 +15,23 @@ html, body {
 }
 .main {
     flex:1;
+}
+
+.main ul li {
+    margin:15px 20px;
+    height:40px;
+    line-height: 40px;
+    border-bottom:1px solid #888;
+    position:relative;
+}
+.main ul li a {
+    text-decoration: none;
+    color:#555;
+}
+.main ul li span {
+    position:absolute;
+    right:0;
+    top:0%;
 }
 .header, .footer {
     height:50px;
