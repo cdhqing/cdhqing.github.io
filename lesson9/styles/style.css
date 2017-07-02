@@ -33,6 +33,19 @@ html, body {
     right:0;
     top:0%;
 }
+
+@media (max-width: 420px) {
+    .main ul li {
+         margin-left: 10px;
+         margin-right: 10px;
+         font-size:13px;
+    }
+}
+
+  .footer .item .fa {
+    font-size: 20px;
+    margin: 3px 0 1px;
+  }
 .header, .footer {
     height:50px;
     background:#555;
