@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.onreadstatechange = function () {
+            if (this.readState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log(`周杰伦共有 ${this.response.length} 张唱片`);
+            }
+        };
+        xhr.open('GET', 'https://raw.githubusercontent.com/fe13/fe/master/JavaScript/AJAX/json/jay.albums.json')
+xhr.send();
+    </script>
+</body>
+</html>

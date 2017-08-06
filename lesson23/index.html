@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #battery,#hourglass{
+            font-size: 80px;
+            color:forestgreen ;
+        }
+    </style>
+</head>
+<body>
+    <i id="battery" class="fa fa-battery-0"></i>
+    <i id="hourglass" class="fa fa-hourglass-1"></i>
+    <div>
+        使用setTimeout输出：<span id="text1">10</span>秒
+       
+    </div>
+      <div>
+        使用setInterval输出：<span id="text2">10</span>秒
+       
+    </div>
+    <script>
+        let $battery = document.querySelector('#battery');
+        function charge() {
+            setTimeout(function() {
+            $battery.classList.remove('fa-battery-0');
+            $battery.classList.add('fa-battery-1');
+            },1000);
+
+            setTimeout(function() {
+            $battery.classList.remove('fa-battery-1');
+            $battery.classList.add('fa-battery-2');
+            },2000);
+
+            setTimeout(function() {
+            $battery.classList.remove('fa-battery-2');
+            $battery.classList.add('fa-battery-3');
+            },3000);
+
+             setTimeout(function() {
+            $battery.classList.remove('fa-battery-3');
+            $battery.classList.add('fa-battery-4');
+            },4000);
+        } 
+        setInterval(charge,4000);
+      
+
+       let $hourglass = document.querySelector('#hourglass');
+
+        function charge2() {
+
+            setTimeout(function() {
+                $hourglass.classList.remove('fa-hourglass-1');
+                $hourglass.classList.add('fa-hourglass-2');
+            },1000);
+        
+             setTimeout(function() {
+                $hourglass.classList.remove('fa-hourglass-2');
+                $hourglass.classList.add('fa-hourglass-3');
+            },2000);
+
+           setTimeout(function(){
+                $hourglass.style.transition = '.5s';
+                $hourglass.style.transform = 'rotateZ(180deg)';
+               
+            },3000);
+
+            setTimeout(function(){
+                 $hourglass.style.transition = '';
+                $hourglass.style.transform = 'rotateZ(0deg)'
+                 $hourglass.classList.remove('fa-hourglass-3');
+                $hourglass.classList.add('fa-hourglass-1');
+            },4000);
+           
+        } 
+        setInterval(charge2,4000);
+
+        let sheep = {
+            name:'绵羊',
+            icon:'羊',
+            count:0
+        };
+
+        function count(animal) {
+            animal.count +=1;
+          //  console.log(`${animal.count} 只 ${animal.name} ${animal.icon.repeat(animal.count)}`);
+        }
+        count(sheep);
+        console.log(count(sheep));
+        setTimeout( function run() {
+            count(sheep);
+            setTimeout(run,1000);
+        },1000);
+
+
+
+
+    let num = 10;
+    setTimeout(function runcount() {
+        var s = document.getElementById("text1");
+        if(num >= 0) {
+            console.log(num);
+          s.innerHTML = num;
+            num--;
+        } 
+            setTimeout(runcount,1000);
+       
+    },1000)
+
+
+   let num2 = 10;
+      setInterval(function runcount2(){
+        var d = document.getElementById("text2");
+         if(num2 >= 0) {
+            d.innerHTML = num;
+            num2--;
+         }
+    },1000)
+   
+   
+//作业第三题
+   const URL = 'https://raw.githubusercontent.com/fe13/fe/master/JavaScript/AJAX/json/jay.albums.json';
+    $.getJSON(URL, function(albums) {
+        console.log(`周杰伦共有 ${albums.length} 张唱片`);
+    });
+
+
+    </script>
+ 
+</body>
+</html>

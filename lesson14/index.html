@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //作业2、给定一个整数，当它可以被 7 整除或被 9 整除或同时能被 7 和 9 整除时，输出相应提示信息。
+var num = 18;
+if(num % 9 ===0 && num % 7 ===0) {
+  console.log(num + "可以整除7同9");
+} else if (num % 7 ===0) {
+  console.log(num + "可以整除7");
+  } else if (num % 9 ===0) {
+    console.log(num + "可以整除9");
+  } else {
+    console.log (num + "不可以整除7或9");
+  }
+    
+//作业3、变量 var day = new Date().getDay()，写一个 switch 或 if ...else 语句，根据 day 的值在工作日输出 ‘上班’，周六日输出 ‘玩耍’
+var days = new Date().getDay();
+switch (days) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    console.log("上班")
+    break;
+  case 6:
+  case 7:
+    console.log("玩耍");
+    break;
+}
+
+//作业4、编程找出字符串 "赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢嬴赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢" 中 "嬴" 的下标
+var text = "赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢嬴赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢赢" ;
+console.log(text.indexOf("嬴"));
+
+//作业5、将上题字符串中的 ‘嬴’ 替换成 '赢' 并返回一个新字符串(JS 的字符串一旦声明不能更改)
+ var newtext = text.replace("嬴" , "输");
+   console.log(newtext);
+
+//作业6、编程找出 "免免免免免免免免免免免免免免兔免免免免免免免免免免免免兔免免免免免免免免免免免免免免免免免免免免免免免免" 里面第二个 "兔" 的下标
+var text1 = "免免免免免免免免免免免免免免兔免免免免免免免免免免免免兔免免免免免免免免免免免免免免免免免免免免免免免免";
+
+var i = text1.indexOf("兔");
+console.log(text1.indexOf("兔" , i + 1));
+
+
+
+    </script>
+</body>
+</html>
