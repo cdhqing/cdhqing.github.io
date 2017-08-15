@@ -33,9 +33,10 @@ body {
   padding-right: 10%;
   font-size: 70px;
   background-color: rgba(41, 41, 41, 0.9);
-  overflow: hidden; }
+  overflow: hidden;
+}
   #result .expr {
-    color: whitesmoke;
+    color:#fff;
     text-align: right; }
 
 #keypod {

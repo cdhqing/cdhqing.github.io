@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX调用练习</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+    <style>
+        #cats {
+            display:flex;
+           flex-wrap:wrap;
+            align-content: center;
+        }
+        .cat {
+            flex-basis :25%;
+             box-sizing: border-box;
+            text-align:center;
+            
+        }
+        #cats img {
+            width:200px;
+            height:200px;
+            transition: .6s transform;
+ 
+          
+        }
+        #cats :hover > img {
+            transform: scale(1.2, 1.2);
+            transition: .4s transform; 
+        } 
+        .load{ 
+            display:block;
+            width: 100%; 
+            text-align: center;
+         }
+        .load #load{
+            width:100px;
+            height:40px;
+            line-height: 40px;
+        }
+    </style>
+<body>
+    <div id="cats">
+
+    </div>
+    <div class="load"><button id="load">加载更多</button></div>
+    <script>
+        (function() { 
+            let page = 1;
+            let $cats = document.querySelector('#cats');
+          
+            $.getJSON('https://octocats.now.sh/api/octocats',function(res) {
+                let cats = res.data;
+                let html = cats.map(function(cat) {
+                    return `<div class="cat"><img src="${cat.image}"><p>名字 ${cat.name} </p></div>`
+                }).join('');
+                $cats.innerHTML = html;
+            });
+            document.addEventListener('click',function(){
+                page += 1;
+                 $.getJSON(`https://octocats.now.sh/api/octocats?page=${page}`,function(res) {
+                let cats = res.data;
+                let html = cats.map(function(cat) {
+                    return `<div class="cat"><img src="${cat.image}"><p>名字 ${cat.name} </p></div>`
+                }).join('');
+                $cats.innerHTML += html;
+            });
+            });
+        })();
+
+    </script>
+</body>
+</html>

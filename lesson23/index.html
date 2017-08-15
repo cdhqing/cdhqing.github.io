@@ -26,6 +26,7 @@
         使用setInterval输出：<span id="text2">10</span>秒
        
     </div>
+    <div id="homew3"></div>
     <script>
         let $battery = document.querySelector('#battery');
         function charge() {
@@ -93,7 +94,7 @@
           //  console.log(`${animal.count} 只 ${animal.name} ${animal.icon.repeat(animal.count)}`);
         }
         count(sheep);
-        console.log(count(sheep));
+        //console.log(count(sheep));
         setTimeout( function run() {
             count(sheep);
             setTimeout(run,1000);
@@ -106,7 +107,7 @@
     setTimeout(function runcount() {
         var s = document.getElementById("text1");
         if(num >= 0) {
-            console.log(num);
+          //  console.log(num);
           s.innerHTML = num;
             num--;
         } 
@@ -127,8 +128,23 @@
    
 //作业第三题
    const URL = 'https://raw.githubusercontent.com/fe13/fe/master/JavaScript/AJAX/json/jay.albums.json';
+    let $homew3 = document.querySelector('#homew3');
     $.getJSON(URL, function(albums) {
         console.log(`周杰伦共有 ${albums.length} 张唱片`);
+        albums.forEach((item) => console.log(`专辑：${item.title}, 发行年份：${item.year}`));
+        for (var key in albums){
+            console.log(key);
+            var value = albums.title;
+            console.log(value);
+        }
+          
+            $.getJSON('URL',function(res) {
+           let homew3 = res.data;
+            //     let html = homew3.map(function(songs) {
+            //         return `<div class="cat"><img src="${homew3.cover}"><p>名字 ${homew3cat.title} </p></div>`
+            //     }).join('');
+            //     $homew3.innerHTML = html;
+          });
     });
 
 
